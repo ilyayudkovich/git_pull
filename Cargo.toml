@@ -1,0 +1,6 @@
+[package]
+name = "git_update"
+version = "0.1.0"
+authors = ["Ilya Yudkovich <iyudkovich@starry.com>"]
+
+[dependencies]
