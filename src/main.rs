@@ -1,6 +1,7 @@
 use std::process::{Command, Output};
 use std::str;
 use std::io;
+use std::time::Duration;
 use std::{thread, time};
 
 fn git_pull(dir: &str) {
@@ -58,7 +59,7 @@ fn main() {
 		git_dir.push_str(&dir);
 		if is_git(git_dir.as_str()) {
 			git_pull(git_dir.as_str());
-			thread::sleep_ms(400); // for clarity
+			thread::sleep(Duration::from_millis(400)); // for clarity
 		}
 		git_dir.clear();
 	}
